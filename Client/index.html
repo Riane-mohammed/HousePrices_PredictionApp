@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="home"></div>
+<form class="form mt-0">
+	<h2 class="fs-5 fw-bold pt-4">Area (Square Feet)</h2>
+    <input class="form-control"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+	<h2 class="fs-5 fw-bold mt-4">Rooms</h2>
+	<div class="my-2">
+		<input type="radio" id="radio-room-1" name="room" value="1"/>
+		<label for="radio-room-1">1</label>
+		<input type="radio" id="radio-room-2" name="room" value="2" checked/>
+		<label for="radio-room-2">2</label>
+		<input type="radio" id="radio-room-3" name="room" value="3"/>
+		<label for="radio-room-3">3</label>
+		<input type="radio" id="radio-room-4" name="room" value="4"/>
+		<label for="radio-room-4">4</label>
+		<input type="radio" id="radio-room-5" name="room" value="5"/>
+		<label for="radio-room-5">5</label>
+	</div>
+	<h2 class="fs-5 fw-bold mt-4">Balcony</h2>
+	<div class="my-2">
+		<input type="radio" id="radio-balcony-1" name="balcony" value="1"/>
+		<label for="radio-balcony-1">1</label>
+		<input type="radio" id="radio-balcony-2" name="balcony" value="2" checked/>
+		<label for="radio-balcony-2">2</label>
+		<input type="radio" id="radio-balcony-3" name="balcony" value="3"/>
+		<label for="radio-balcony-3">3</label>
+		<input type="radio" id="radio-balcony-4" name="balcony" value="4"/>
+		<label for="radio-balcony-4">4</label>
+		<input type="radio" id="radio-balcony-5" name="balcony" value="5"/>
+		<label for="radio-balcony-5">5</label>
+	</div>
+	</form>
+<form class="form">
+	<h2 class="fs-5 fw-bold mt-4">Bath</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bath-1" name="Bathrooms" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="Bathrooms" value="2" checked/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="Bathrooms" value="3"/>
+		<label for="radio-bath-3">3</label>
+		<input type="radio" id="radio-bath-4" name="Bathrooms" value="4"/>
+		<label for="radio-bath-4">4</label>
+		<input type="radio" id="radio-bath-5" name="Bathrooms" value="5"/>
+		<label for="radio-bath-5">5</label>
+	</div>
+		<h2 class="fs-5 fw-bold mt-4">Location</h2>
+	<div>
+  <select class="form-select" name="" id="uiLocations">
+    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+		<option>Electronic City</option>
+        <option>Rajaji Nagar</option>
+  </select>
+</div>
+	<button class="btn btn-primary m-5" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<p id="uiEstimatedPrice"  class="fs-6 fw-bold mt-4 text-center bg-white rounded"></p>
+</body>
+</html>
